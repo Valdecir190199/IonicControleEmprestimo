@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Funcionarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let funcionairo of listaFuncionarios| async">
+      <ion-label>{{ funcionairo.nome }}</ion-label>
+      <ion-label>{{ funcionairo.telefone }}</ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-button  expand="full" href="salvar-funcionario">Novo</ion-button>
+
+  <ion-button  expand="full" href="home">Voltar</ion-button>
+
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Salvar Funcionario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <label>Nome</label>
+  <ion-input type="text" name="nome"  [(ngModel)]="funcionario.nome"></ion-input>
+  <label>Telefone</label>
+  <ion-input type="text" name="telefone" [(ngModel)]="funcionario.telefone"></ion-input>
+  <ion-button expand="full" (click)="salvar()">Salvar</ion-button>
+  <ion-button expand="full" href="funcionario-listar">Voltar</ion-button>
+</ion-content>

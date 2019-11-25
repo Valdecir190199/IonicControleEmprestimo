@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Materiais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let material of listaMateriais | async">
+      <ion-label>{{ material.nome }}</ion-label>
+      <ion-label>{{ material.quantidade }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" href="salvar-material">Adicionar Material</ion-button>
+  <ion-button expand="full" href="materia-listar">Voltar</ion-button>
+</ion-content>

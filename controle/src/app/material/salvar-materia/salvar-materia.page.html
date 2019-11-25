@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>salvar-materia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <label>Nome</label>
+  <ion-input type="text" name="nome" [(ngModel)]="material.nome"></ion-input>
+  <label>Quantidade</label>
+  <ion-input type="number" name="quantidade" [(ngModel)]="material.quantidade"></ion-input>
+  <ion-button  expand="full" (click)="salvar()">salvar</ion-button>
+  <ion-button expand="full"  href="home">Voltar</ion-button>
+  </ion-content>

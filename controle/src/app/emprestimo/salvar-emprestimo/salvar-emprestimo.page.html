@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Emprestar Material</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">Quantidade</ion-label>
+        <ion-input name="quantidade" [(ngModel)]="emprestimo.quantidade"></ion-input>
+      </ion-item>
+  <ion-item>
+    <ion-label position="floating">Funcionario</ion-label>
+    <ion-select [(ngModel)]="emprestimo.funcionario">
+      <ion-select-option *ngFor='let funcionario of listaFuncionario | async' [value]="funcionario">
+        {{funcionario.nome}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">Aluno</ion-label>
+      <ion-select [(ngModel)]="emprestimo.aluno">
+        <ion-select-option *ngFor='let aluno of listaAluno | async' [value]="aluno">
+          {{aluno.nome}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Material</ion-label>
+        <ion-select [(ngModel)]="emprestimo.material">
+          <ion-select-option *ngFor='let material of listaMaterial | async' [value]="material">
+            {{material.nome}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+  <ion-button expand="full" shape="round" (click)="salvar()">salvar</ion-button>
+  <ion-button expand="full" shape="round" href="listar-emprestimo">voltar</ion-button>
+</ion-content>

@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Emprestimo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item *ngFor="let emprestimo of listaEmprestimo | async">
+      <ion-label>{{ emprestimo.funcionario.nome }}</ion-label>
+      <ion-label>{{ emprestimo.aluno.nome }}</ion-label>
+      <ion-label>{{ emprestimo.material.nome }}</ion-label>
+      <ion-label>{{ emprestimo.quantidade}}</ion-label>
+    </ion-item>
+
+  </ion-list>
+  
+  <ion-button expand="full" href="salvar-emprestimo">Novo</ion-button><br>
+  <ion-button expand="full" href="home">Voltar</ion-button>
+</ion-content>

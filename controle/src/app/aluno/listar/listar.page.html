@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listar alunos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let aluno of listaAlunos | async">
+
+
+      <ion-label>{{ aluno.nome }}</ion-label>
+      <ion-label>{{ aluno.curso.nome }}</ion-label>
+      <ion-label>{{ aluno.ano }}</ion-label>
+
+      <label>
+        <ion-button> Alterar</ion-button><br>
+        <ion-button> Exclur</ion-button>
+      </label>
+    </ion-item>
+
+
+  </ion-list>
+  <ion-button expand="full" href="salvar-aluno">Novo</ion-button>
+  <ion-button expand="full" href="home">Voltar</ion-button>
+</ion-content>
